@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+      <!-- Latest Posts -->
+      <main class="posts-listing col-lg-8"> 
+        <div class="container">
+          <div class="row">          
+            <app-post-card *ngFor="let eachpost of blogPosts" [post]="eachpost"  class="post col-xl-6"></app-post-card>
+            <div class="w-100"><app-paging [page]="page" (newPage)="getPage($event)"></app-paging></div>
+          </div>
+        </div>
+      </main>
+      <aside class="col-lg-4">
+     <app-widget-search></app-widget-search>
+        <!-- Widget [Latest Posts Widget] -->
+        <div class="widget latest-posts">
+          <header>
+            <h3 class="h6">Latest Posts</h3>
+          </header>
+
+          <app-last-post></app-last-post>
+          
+        </div>
+            <!-- Widget [Categories Widget]-->
+            <div class="widget categories">
+              <header>
+                <h3 class="h6">Categories</h3>
+              </header>
+            <app-categories></app-categories>
+             
+            </div>
+        <!-- Widget [Tags Cloud Widget]-->
+        <div class="widget tags">       
+          <header>
+            <h3 class="h6">Tags</h3>
+          </header>
+          <ul class="list-inline">
+            <app-tags ></app-tags>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+  

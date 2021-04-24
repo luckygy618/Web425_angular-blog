@@ -1,0 +1,2 @@
+<li class="list-inline-item" *ngFor="let tag of tags" ><a [routerLink]="['/blog']" [queryParams]="{ tag: tag.substring(1) }"
+    class="tag">{{tag}}</a></li>

@@ -1,0 +1,17 @@
+    <!-- Widget [Latest Posts Widget] -->
+ 
+      
+        <div class="blog-posts"></div>
+
+      
+        <div class="latest-posts"  *ngFor="let eachLastPost of posts">
+        <a [routerLink]="['/post', eachLastPost._id]">
+            <div class="item d-flex align-items-center">
+              <div class="image"><img [src]="eachLastPost.featuredImage" alt="..." class="img-fluid"></div>
+              <div class="title"><strong>{{eachLastPost.title}}</strong>
+                <div class="d-flex align-items-center">
+                  <div class="views"><i class="icon-eye"></i> {{eachLastPost.views}}</div>
+                  <div class="comments"><i class="icon-comment"></i>{{eachLastPost.comments.length }}</div>
+                </div>
+              </div>
+            </div></a></div>
